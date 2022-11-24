@@ -1,0 +1,54 @@
+---
+- name: Centos 7 Patch
+  hosts: 172.28.1.18
+  tasks:
+    - name: call all the files
+      copy:
+          src: "/tmp/{{ item }}"
+          dest: "/tmp/"
+      with_items:
+        - finalczentrix_release_1.0.18.21.12.155.ZenDialerX_CMS_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.03.30.ZenDialerX_CMS_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.01.01.ZenDialerX_Main_DB_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.21.08.03.ZenDialerX_CMS_Main_DB_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.22.08.08.ZenDialerX_Main_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.22.07.02.ZenDialerX_Dialer_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.08.06.ZenDialerX_Reporting_Engine_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.08.03.ast_bin_x64_CENTOS7_5_dahdi_without_db.tar.gz
+    - name:
+      copy:
+          src: "/home/playbook/patch_installation.sh"
+          dest: "/tmp/"
+    - name: Run a Script with argunments (using 'cmd' parameter)
+      command: "sh /tmp/patch_installation.sh {{ item }}"
+      with_items:
+        - finalczentrix_release_1.0.18.21.12.155.ZenDialerX_CMS_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.03.30.ZenDialerX_CMS_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.01.01.ZenDialerX_Main_DB_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.21.08.03.ZenDialerX_CMS_Main_DB_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.22.08.08.ZenDialerX_Main_CENTOS7.tar.gz
+        - finalczentrix_release_1.0.18.22.07.02.ZenDialerX_Dialer_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.08.06.ZenDialerX_Reporting_Engine_CENTOS7_without_db.tar.gz
+        - finalczentrix_release_1.0.18.22.08.03.ast_bin_x64_CENTOS7_5_dahdi_without_db.tar.gz
+
+- name: Centos 6 Patch
+  hosts: 172.16.1.208
+  tasks:
+    - name: call all the files
+      copy:
+          src: "/tmp/{{ item }}"
+          dest: "/tmp/"
+      with_items:
+        - czentrix_software_1.0.18.15.4.virtualq_ast_bin_TE_NODE_x64_CENTOS6_dahdi.tar.gz
+        - finalczentrix_release_1.0.18.21.09.11.Czentrix_Cluster_Cloud_NODE_Global_Chan_CENTOS6_without_db.tar.gz
+        - finalczentrix_release_1.0.18.21.09.12.Czentrix_Cluster_Cloud_NODE_Global_Chan_CENTOS6_without_db.tar.gz
+    - name:
+      copy:
+          src: "/home/playbook/patch_installation.sh"
+          dest: "/tmp/"
+    - name: Run a Script with argunments (using 'cmd' parameter)
+      command: "sh /tmp/patch_installation.sh {{ item }}"
+      with_items:
+        - czentrix_software_1.0.18.15.4.virtualq_ast_bin_TE_NODE_x64_CENTOS6_dahdi.tar.gz
+        - finalczentrix_release_1.0.18.21.09.11.Czentrix_Cluster_Cloud_NODE_Global_Chan_CENTOS6_without_db.tar.gz
+        - finalczentrix_release_1.0.18.21.09.12.Czentrix_Cluster_Cloud_NODE_Global_Chan_CENTOS6_without_db.tar.gz
