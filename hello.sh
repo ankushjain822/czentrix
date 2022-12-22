@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd tvt
+useradd ajay
