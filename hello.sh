@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd ajay
+useradd ravi
