@@ -1,2 +1,2 @@
 #!/bin/bash
-usedel -rf ravi
+userdel -rf ravi
