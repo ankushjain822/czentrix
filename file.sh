@@ -1,2 +1,2 @@
 #!/bin/bash
-userdel -rf ravi
+free -g
