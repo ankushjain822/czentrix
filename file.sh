@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd ravi
+useradd xyz
