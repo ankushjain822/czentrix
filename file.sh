@@ -1,4 +1,4 @@
 #!/bin/bash
-free -h
-df -Th
-whoami > /tmp/file1.txt
+free -h > /tmp/file1.txt
+df -Th >> /tmp/file1.txt
+whoami >> /tmp/file1.txt
