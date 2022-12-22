@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd xyz
+useradd ajay
