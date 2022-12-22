@@ -1,2 +1,4 @@
 #!/bin/bash
-useradd ravi
+free -h
+df -Th
+whoami
