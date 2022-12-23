@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd ankush
+userdel -rf ankush
