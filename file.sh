@@ -1,2 +1,2 @@
 #!/bin/bash
-useadd raj
+useradd raj
