@@ -1,2 +1,0 @@
-# czentrix
-For Patch Installation
