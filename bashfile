@@ -1,0 +1,10 @@
+pipeline {
+  agent {label 'linux'}
+ 
+  stage('hello') {
+    steps {
+      sh '/var/lib/jenkins/workspace/python-file/'
+      }
+    }
+  }
+} 
