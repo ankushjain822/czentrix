@@ -1,0 +1,8 @@
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install net-tool packages
+    yum:
+      name: net-tools
+      state: present
