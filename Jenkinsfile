@@ -9,7 +9,6 @@ pipeline {
   stage('hello') {
     steps {
       sh 'python3.9 hello.py'
-      sh 'python3.9 message.py'
       }
     }
   }
