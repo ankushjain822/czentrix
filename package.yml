@@ -1,6 +1,6 @@
 ---
 - name: This sets up an httpd webserver
-  hosts: all
+  hosts: node
   tasks:
   - name: Install net-tool packages
     yum:
