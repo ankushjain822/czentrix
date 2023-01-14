@@ -1,0 +1,11 @@
+---
+- name: Copy all package remote tmp directory
+  hosts: all
+  tasks:
+    - name: copy files
+      copy:
+        src: /home/playbook/java.sh
+        dest: /tmp/
+
+    - name: Transfer and execute a script.
+      command: sh /tmp/java.sh
